@@ -31,6 +31,15 @@ body {
   background-color: #333;
 }
 
+.logoImage
+{
+  width: 80px; /* Adjust the size as needed */
+            height: 80px; /* Make sure width and height are equal */
+            border-radius: 50%; /* This makes it circular */
+            border: 2px solid #db3434; /* Add a border with color and thickness */
+            object-fit: cover; /* Ensure the image scales nicely inside the container */
+}
+
 .navbar-logo a {
   color: #fff;
   font-size: 1.5rem;
@@ -57,35 +66,6 @@ body {
 .navbar-links a:hover {
   color: #ff6347;
 }
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar-links {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      flex-direction: column;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
-
-  .navbar-links li {
-      margin: 15px 0;
-  }
-
-  .hamburger-menu {
-      display: flex;
-  }
-}
-
-
 
 .nav-list {
   display: flex;
