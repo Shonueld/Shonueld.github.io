@@ -45,6 +45,7 @@ body {
 .navbar-logo {
   position: absolute;
   left: 30px; /* Adjust the value to match your layout */
+  z-index: 10;
 }
 
 .navbar-links {
@@ -86,7 +87,7 @@ body {
   text-decoration: none;
   letter-spacing: 2px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  font-family: 'Uptio Std', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-shadow: 3px 2px 2px black; /* Creates a soft black outline around the text */
   display: inline-block; /* This allows transform to work correctly */
   min-width: 50px; /* Optional: set a minimum width */
