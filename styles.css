@@ -25,31 +25,32 @@ body {
 /* Navbar styles */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centers the whole navbar */
   align-items: center;
   padding: 15px 30px;
-  background-color: #333;
+  background-color: #d0423a;
+  position: relative; /* Allows you to position the logo and other elements */
 }
 
 .logoImage
 {
-  width: 80px; /* Adjust the size as needed */
-            height: 80px; /* Make sure width and height are equal */
+  width: 60px; /* Adjust the size as needed */
+            height: 60px; /* Make sure width and height are equal */
             border-radius: 50%; /* This makes it circular */
-            border: 2px solid #db3434; /* Add a border with color and thickness */
+            border: 3px solid #ee8983; /* Add a border with color and thickness */
             object-fit: cover; /* Ensure the image scales nicely inside the container */
 }
 
-.navbar-logo a {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
+
+.navbar-logo {
+  position: absolute;
+  left: 30px; /* Adjust the value to match your layout */
 }
 
 .navbar-links {
-  list-style-type: none;
   display: flex;
+  justify-content: center;
+  list-style-type: none;
 }
 
 .navbar-links li {
@@ -84,13 +85,18 @@ body {
   margin: 0 12px;
   text-decoration: none;
   letter-spacing: 2px;
-
-  font-family: monospace;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  font-family: 'Uptio Std', sans-serif;
+  text-shadow: 3px 2px 2px black; /* Creates a soft black outline around the text */
+  display: inline-block; /* This allows transform to work correctly */
+  min-width: 50px; /* Optional: set a minimum width */
 }
 
 .navbar a:hover {
-  color: var(--cg-blue);
-  text-decoration: underline;
+  background-color: var(--cg-black); /* Highlight background color on hover */
+  color: var(--cg-white); /* Keep the text color */
+  text-decoration: none; /* Ensure no underline on hover */
+  transform: scale(1.2); /* Enlarge text to 120% of its original size */
 }
 
 .navbar a:active {
