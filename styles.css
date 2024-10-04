@@ -41,14 +41,6 @@ body {
             object-fit: cover; /* Ensure the image scales nicely inside the container */
 }
 
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .project {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -56,6 +48,11 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  padding: 15px;
+  text-align: center; /* Ensures the content is centered */
+  display: flex; /* This allows us to use flex properties to control the layout */
+  flex-direction: column; /* Makes the image and text stack vertically */
+  align-items: center; /* Ensures the content is centered within the project */
 }
 
 .project:hover {
@@ -64,21 +61,39 @@ body {
 
 .project img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px; /* Space between image and title */
 }
+
 
 .project h3 {
   font-size: 1.5rem;
-  margin: 15px;
+  margin: 10px 0; /* Adds space above and below the title */
   color: #333;
 }
 
-.project p {
+.project ul {
+  padding-left: 20px; /* Optional: Add some indentation to list items */
+  text-align: left; /* Align the text to the left for better readability */
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.project p, .project ul {
   font-size: 1rem;
   margin: 0 15px 15px;
   color: #666;
 }
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 
 .navbar-logo {
@@ -152,7 +167,7 @@ body {
 }
 
 main {
-  padding: 0 20px 40px 20px;
+  padding: 40px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,15 +183,7 @@ main {
 
 /* CSS for portfolio grid */
 
-.project {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
 
-  /* Debug border */
-  /* border: 2px solid blue; */
-}
 
 .item-link {
   width: 70%;
